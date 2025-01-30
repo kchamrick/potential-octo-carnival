@@ -15,6 +15,7 @@ function ContactList({ setFeaturedUser }) {
         .catch((err) => console.log(err));
     }, []);
   
+    if(!contacts.length) return <p style={{fontSize: "100px", fontWeight: "bold"}}>Loading...</p>
     return (
     <table>
         <thead>
